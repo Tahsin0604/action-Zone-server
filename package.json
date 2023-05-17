@@ -1,7 +1,6 @@
 {
   "name": "toy-marketplace-server",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -13,6 +12,8 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
-    "express": "^4.18.2"
-  }
+    "express": "^4.18.2",
+    "mongodb": "^5.5.0"
+  },
+  "description": ""
 }
