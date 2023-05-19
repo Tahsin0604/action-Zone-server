@@ -1,0 +1,222 @@
+[
+  {
+    "picture_url": "https://i.ibb.co/YDb93yX/1-superman.jpg",
+    "name": "Superman Action Figure",
+    "seller_name": "Toy Universe",
+    "seller_email": "sales@toyuniverse.com",
+    "sub_category": "Action Figures",
+    "price": 24.99,
+    "rating": 4.7,
+    "available_quantity": 5,
+    "description": "Bring the power of Superman to your playtime with this action figure. Get ready for epic adventures and save the day with Superman!"
+  },
+  {
+    "picture_url": "https://i.ibb.co/1zpWkbF/2-batman.jpg",
+    "name": "Batman Action Figure",
+    "seller_name": "Toy Universe",
+    "seller_email": "sales@toyuniverse.com",
+    "sub_category": "Action Figures",
+    "price": 19.99,
+    "rating": 4.5,
+    "available_quantity": 8,
+    "description": "Enter the world of Gotham City with this Batman action figure. It's crafted with attention to detail and features multiple points of articulation for dynamic poses."
+  },
+  {
+    "picture_url": "https://i.ibb.co/3Fr72vz/3-iron-man.jpg",
+    "name": "Iron Man Action Figure",
+    "seller_name": "Toy Universe",
+    "seller_email": "sales@toyuniverse.com",
+    "sub_category": "Action Figures",
+    "price": 29.99,
+    "rating": 4.9,
+    "available_quantity": 3,
+    "description": "Suit up as the armored Avenger with this Iron Man action figure. Join the Avengers and save the world from threats!"
+  },
+  {
+    "picture_url": "https://i.ibb.co/6wPTVBm/4-wonderwoman.jpg",
+    "name": "Wonder Woman Action Figure",
+    "seller_name": "Toy Universe",
+    "seller_email": "sales@toyuniverse.com",
+    "sub_category": "Action Figures",
+    "price": 22.99,
+    "rating": 4.6,
+    "available_quantity": 7,
+    "description": "Unleash the power of the Amazonian warrior with this Wonder Woman action figure. It's beautifully sculpted and features authentic costume details. The figure includes her signature lasso and a shield accessory. Join Wonder Woman in defending justice and promoting peace!"
+  },
+  {
+    "picture_url": "https://i.ibb.co/NT84yPp/5-spiderman.jpg",
+    "name": "Spider-Man Action Figure",
+    "seller_name": "Toy Universe",
+    "seller_email": "sales@toyuniverse.com",
+    "sub_category": "Action Figures",
+    "price": 18.99,
+    "rating": 4.8,
+    "available_quantity": 6,
+    "description": "Swing into action with this Spider-Man action figure. Join Spider-Man in protecting New York City from villains!"
+  },
+  {
+    "picture_url": "https://i.ibb.co/GTMk4bP/6-capptainamerica.jpg",
+    "name": "Captain America Action Figure",
+    "seller_name": "Toy Universe",
+    "seller_email": "sales@toyuniverse.com",
+    "sub_category": "Action Figures",
+    "price": 26.99,
+    "rating": 4.7,
+    "available_quantity": 4,
+    "description": "Embody the spirit of patriotism with this Captain America action figure. It's meticulously crafted and features Captain America's iconic shield. The figure includes multiple accessories and a display stand. Join Captain America in fighting for truth, justice, and the American way!"
+  },
+  {
+    "picture_url": "https://i.ibb.co/YLNKk3W/7-xmen.jpg",
+    "name": "X-Men Action Figure Set",
+    "seller_name": "Smash Toys",
+    "seller_email": "sales@smashtoys.com",
+    "sub_category": "Collectible Statues",
+    "price": 39.99,
+    "rating": 4.9,
+    "available_quantity": 2,
+    "description": "Assemble the mighty X-Men with this action figure set. It includes popular mutant heroes like Wolverine, Cyclops, Storm, and Jean Grey. Each figure is highly detailed and comes with their unique accessories. Join the X-Men in defending mutantkind and fighting against evil!"
+  },
+  {
+    "picture_url": "https://i.ibb.co/Y2DzGMH/8-hulk.jpg",
+    "name": "Hulk Smash Action Figure",
+    "seller_name": "Smash Toys",
+    "seller_email": "sales@smashtoys.com",
+    "sub_category": "Transforming Figures",
+    "price": 32.99,
+    "rating": 4.7,
+    "available_quantity": 3,
+    "description": "Unleash the power of the Incredible Hulk with this transforming action figure. It starts as a compact figure and with a simple twist, expands into a massive Hulk with roaring sound effects. It's perfect for epic battles and smashing action!"
+  },
+  {
+    "picture_url": "https://i.ibb.co/RYMwkc6/9-deadpool.jpg",
+    "name": "Deadpool Collectible Statue",
+    "seller_name": "Smash Toys",
+    "seller_email": "sales@smashtoys.com",
+    "sub_category": "Collectible Statues",
+    "price": 44.99,
+    "rating": 4.8,
+    "available_quantity": 5,
+    "description": "Add a touch of humor and mayhem to your collection with this Deadpool statue. It's meticulously sculpted and captures the irreverent nature of the Merc with a Mouth. Display it proudly and enjoy the witty banter of Deadpool in your own space!"
+  },
+  {
+    "picture_url": "https://i.ibb.co/YLYdFq8/10-blackpanther.jpg",
+    "name": "Black Panther Vibranium Suit Action Figure",
+    "seller_name": "Smash Toys",
+    "seller_email": "sales@smashtoys.com",
+    "sub_category": "Transforming Figures",
+    "price": 27.99,
+    "rating": 4.6,
+    "available_quantity": 6,
+    "description": "Channel the power of the Black Panther with this action figure featuring the Vibranium suit. It's designed based on the Marvel movie and showcases intricate detailing. The figure comes with accessories and a display base. Join T'Challa in protecting Wakanda and fighting for justice!"
+  },
+  {
+    "picture_url": "https://i.ibb.co/mR0qTvQ/11-aquaman-trident.jpg",
+    "name": "Aquaman Trident Prop Replica",
+    "seller_name": "Smash Toys",
+    "seller_email": "sales@smashtoys.com",
+    "sub_category": "Collectible Statues",
+    "price": 49.99,
+    "rating": 4.8,
+    "available_quantity": 3,
+    "description": "Dive into the world of Atlantis with this Aquaman Trident prop replica. It's meticulously crafted to resemble the powerful weapon wielded by the King of the Seven Seas. The trident features intricate details and a display stand. Showcase your love for Aquaman with this stunning collectible!"
+  },
+  {
+    "picture_url": "https://i.ibb.co/k58V77T/12-eye-of-agamotto.jpg",
+    "name": "Doctor Strange Eye of Agamotto Replica",
+    "seller_name": "Comics Collectors",
+    "seller_email": "sales@figures.com",
+    "sub_category": "Collectible Statues",
+    "price": 59.99,
+    "rating": 4.9,
+    "available_quantity": 4,
+    "description": "Unleash the mystical powers of Doctor Strange with this Eye of Agamotto replica. It features intricate detailing and a built-in light-up function. The replica comes with a display stand and is perfect for cosplay or display. Harness the power of the Time Stone and protect the universe!"
+  },
+  {
+    "picture_url": "https://i.ibb.co/0q9fJfv/13-Nightwing.jpg",
+    "name": "Nightwing Action Figure",
+    "seller_name": "Comics Collectors",
+    "seller_email": "sales@figures.com",
+    "sub_category": "Action Figures",
+    "price": 21.99,
+    "rating": 4.7,
+    "available_quantity": 5,
+    "description": "Unleash the acrobatic skills of Nightwing with this action figure. It features a highly detailed design and comes with multiple accessories, including his signature Escrima sticks. Join Dick Grayson in his fight against crime in the streets of Gotham City!"
+  },
+  {
+    "picture_url": "https://i.ibb.co/fq8t67V/14-Batgirl-Batcycle.jpg",
+    "name": "Batgirl Batcycle Playset",
+    "seller_name": "Comics Collectors",
+    "seller_email": "sales@figures.com",
+    "sub_category": "Playsets",
+    "price": 34.99,
+    "rating": 4.8,
+    "available_quantity": 3,
+    "description": "Race through the streets of Gotham with this Batgirl Batcycle playset. It includes a highly detailed Batgirl action figure and a Batcycle vehicle. The playset features working wheels and realistic details. Join Barbara Gordon in her crime-fighting adventures!"
+  },
+  {
+    "picture_url": "https://i.ibb.co/Wc57cYL/15-red-hood.jpg",
+    "name": "Red Hood Helmet Replica",
+    "seller_name": "Comics Collectors",
+    "seller_email": "sales@figures.com",
+    "sub_category": "Collectible Statues",
+    "price": 49.99,
+    "rating": 4.6,
+    "available_quantity": 4,
+    "description": "Embody the anti-hero persona with this Red Hood helmet replica. It's crafted with high-quality materials and features detailed sculpting. The helmet comes with an adjustable strap for a comfortable fit. Complete your Red Hood cosplay or display it as a collectible!"
+  },
+  {
+    "picture_url": "https://i.ibb.co/DR3cxRT/16-joker.jpg",
+    "name": "Joker Playsets",
+    "seller_name": "Comics Collectors",
+    "seller_email": "sales@figures.com",
+    "sub_category": "Playsets",
+    "price": 39.99,
+    "rating": 4.7,
+    "available_quantity": 6,
+    "description": "Embrace the chaos with this collectible Joker figure. It features a highly detailed sculpt and captures the maniacal essence of the Clown Prince of Crime. The figure comes with interchangeable hands and accessories, including his signature Joker card. Join the Dark Knight's arch-nemesis in wreaking havoc on Gotham City!"
+  },
+  {
+    "picture_url": "https://i.ibb.co/DrZNg98/17-cat-woman.jpg",
+    "name": "Catwoman Action Figure",
+    "seller_name": "Toy Universe",
+    "seller_email": "sales@toyuniverse.com",
+    "sub_category": "Action Figures",
+    "price": 24.99,
+    "rating": 4.6,
+    "available_quantity": 5,
+    "description": "Unleash the cunning and agility of Catwoman with this action figure. It's designed with intricate detailing and includes accessories like her whip and claws. The figure features multiple points of articulation for dynamic poses. Join Selina Kyle in her adventures as a skilled thief and femme fatale!"
+  },
+  {
+    "picture_url": "https://i.ibb.co/2nWgwms/18-thanos.jpg",
+    "name": "Thanos Infinity Gauntlet Replica",
+    "seller_name": "Cosmic Artifacts",
+    "seller_email": "sales@smashtoys.com",
+    "sub_category": "Collectible Statues",
+    "price": 79.99,
+    "rating": 4.9,
+    "available_quantity": 4,
+    "description": "Command the power of the Infinity Stones with this Thanos Infinity Gauntlet replica. It's intricately designed with fine detailing and features light-up and sound effects. The gauntlet is a perfect display piece for any Marvel fan and a must-have for collectors. Become the Mad Titan and conquer the universe!"
+  },
+  {
+    "picture_url": "https://i.ibb.co/G7WWck9/19-luthar.jpg",
+    "name": "Lex Luthor Power Suit Action Figure",
+    "seller_name": "Toy Universe",
+    "seller_email": "sales@toyuniverse.com",
+    "sub_category": "Action Figures",
+    "price": 34.99,
+    "rating": 4.7,
+    "available_quantity": 5,
+    "description": "Unleash the brilliance and villainy of Lex Luthor with this Power Suit action figure. It features a highly detailed sculpt and includes accessories such as his powerful gauntlet and Kryptonite. Join Superman's arch-nemesis in his quest for power and control!"
+  },
+  {
+    "picture_url": "https://i.ibb.co/nPJPBg9/20-harlee-quine.jpg",
+    "name": "Harley Quinn Baseball Bat Prop",
+    "seller_name": "Comics Collectors",
+    "seller_email": "sales@figures.com",
+    "sub_category": "Playsets",
+    "price": 19.99,
+    "rating": 4.8,
+    "available_quantity": 6,
+    "description": "Get ready to cause chaos with this Harley Quinn baseball bat prop replica. It's designed to resemble her iconic weapon, featuring detailed engravings and a weathered finish. The bat is made of sturdy materials and is a perfect addition to your cosplay or display collection. Embrace the madness with Harley Quinn!"
+  }
+]
