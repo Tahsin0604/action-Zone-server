@@ -31,6 +31,20 @@ async function run() {
 
     const toyCollection = client.db("actionZoneDB").collection("toys");
 
+    app.get("/toys", async (req, res) => {
+      const page = parseInt(req.query.page) || 0;
+      const limit = parseInt(req.query.limit) || 20;
+      const skip = page * limit;
+      const email = req.query.email;
+      const query = { email: email };
+      const result = await toyCollection
+        .find(query)
+        .skip(skip)
+        .limit(limit)
+        .toArray();
+      res.send(result);
+    });
+
     app.get("/toys/:category", async (req, res) => {
       const page = parseInt(req.query.page) || 0;
       const limit = parseInt(req.query.limit) || 8;
@@ -52,6 +66,8 @@ async function run() {
     });
 
     app.get("/total-products", async (req, res) => {
+      const email = req.query.email;
+      const query = { email: email };
       const result = await toyCollection.estimatedDocumentCount();
       res.send({ totalProducts: result });
     });
