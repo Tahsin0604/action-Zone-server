@@ -36,22 +36,25 @@ async function run() {
       const limit = parseInt(req.query.limit) || 8;
       const skip = page * limit;
       const category = req.params.category;
-      console.log(page, limit, category);
+
       let query = {};
-      if (category !== "all") {
-        query = { ub_category: category };
+      if (category !== "All") {
+        query = { sub_category: category };
       }
 
       const result = await toyCollection
-        .find()
+        .find(query)
         .skip(skip)
         .limit(limit)
         .toArray();
 
-      console.log(result.length);
       res.send(result);
     });
 
+    app.get("/total-products", async (req, res) => {
+      const result = await toyCollection.estimatedDocumentCount();
+      res.send({ totalProducts: result });
+    });
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log(
