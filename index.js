@@ -86,7 +86,6 @@ async function run() {
     //get a single toy
     app.get("/toy/:id", async (req, res) => {
       const id = req.params.id;
-      console.log(id);
       const query = { _id: new ObjectId(id) };
       const result = await toyCollection.findOne(query);
       res.send(result);
@@ -98,17 +97,20 @@ async function run() {
       const result = await toyCollection.insertOne(toy);
       res.send(result);
     });
-    //Update Operations
+
+    // Update Operations
     app.patch("/toy/:id", async (req, res) => {
       const id = req.params.id;
+      console.log(id);
       const updatedToy = req.body;
+      console.log(updatedToy);
       const query = { _id: new ObjectId(id) };
-      const updatedDocs = {
-        $set: {
-          status: updatedToy.status,
-        },
-      };
-      const result = await toyCollection.updateOne(query, updatedToy);
+      // const updatedDocs = {
+      //   $set: {
+      //     status: updatedToy.status,
+      //   },
+      // };
+      const result = await toyCollection.replaceOne(query, updatedToy);
       res.send(result);
     });
     // Send a ping to confirm a successful connection
