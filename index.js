@@ -35,16 +35,22 @@ async function run() {
       const page = parseInt(req.query.page) || 0;
       const limit = parseInt(req.query.limit) || 20;
       const skip = page * limit;
-      const email = req.query.email;
-      const query = { email: email };
+      let email = req.query.email;
+
+      let query = {};
+      if (email) {
+        query = { seller_email: email };
+      }
       const result = await toyCollection
         .find(query)
         .skip(skip)
         .limit(limit)
         .toArray();
+
       res.send(result);
     });
 
+    // Category
     app.get("/toys/:category", async (req, res) => {
       const page = parseInt(req.query.page) || 0;
       const limit = parseInt(req.query.limit) || 8;
@@ -65,10 +71,16 @@ async function run() {
       res.send(result);
     });
 
+    //total product
     app.get("/total-products", async (req, res) => {
       const email = req.query.email;
-      const query = { email: email };
-      const result = await toyCollection.estimatedDocumentCount();
+      let query = {};
+      if (email) {
+        query = { seller_email: email };
+      }
+      console.log(query);
+      const result = await toyCollection.countDocuments(query);
+      console.log(result);
       res.send({ totalProducts: result });
     });
     // Send a ping to confirm a successful connection
