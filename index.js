@@ -92,6 +92,25 @@ async function run() {
       res.send(result);
     });
 
+    // add a single toy
+    app.post("/toy", async (req, res) => {
+      const toy = req.body;
+      const result = await toyCollection.insertOne(toy);
+      res.send(result);
+    });
+    //Update Operations
+    app.patch("/toy/:id", async (req, res) => {
+      const id = req.params.id;
+      const updatedToy = req.body;
+      const query = { _id: new ObjectId(id) };
+      const updatedDocs = {
+        $set: {
+          status: updatedToy.status,
+        },
+      };
+      const result = await toyCollection.updateOne(query, updatedToy);
+      res.send(result);
+    });
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log(
