@@ -30,14 +30,29 @@ async function run() {
     await client.connect();
 
     const toyCollection = client.db("actionZoneDB").collection("toys");
+    const categoryCollection = client.db("actionZoneDB").collection("category");
 
-    // count total product (email optional)
+    //find sub-category
+    app.get("/category/:category", async (req, res) => {
+      const category = req.params.category;
+      const query = { name: category };
+      const result = await categoryCollection.findOne(query);
+      res.send(result);
+    });
+
+    // count total product
     app.get("/total-products", async (req, res) => {
-      const email = req.query.email;
-      let query = {};
-      if (email) {
-        query = { seller_email: email };
-      }
+      console.log("hello");
+      const result = await toyCollection.countDocuments();
+      console.log(result);
+      res.send({ totalProducts: result });
+    });
+
+    // count total product for email
+    app.get("/total-products/:email", async (req, res) => {
+      const email = req.params.email;
+      let query = { seller_email: email };
+
       const result = await toyCollection.countDocuments(query);
       res.send({ totalProducts: result });
     });
@@ -76,15 +91,17 @@ async function run() {
 
     // get all toys by Category
     app.get("/toys/:category", async (req, res) => {
+      const subCategory = req.query.subCategory;
       const page = parseInt(req.query.page) || 0;
       const limit = parseInt(req.query.limit) || 8;
       const skip = page * limit;
       const category = req.params.category;
 
-      let query = {};
-      if (category !== "All") {
-        query = { sub_category: category };
+      let query = { category: category };
+      if (subCategory !== "all") {
+        query = { category: category, sub_category: subCategory };
       }
+      console.log(query);
 
       const result = await toyCollection
         .find(query)
