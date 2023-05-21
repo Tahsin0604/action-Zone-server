@@ -1,5 +1,5 @@
 //import
-const { MongoClient, ServerApiVersion } = require("mongodb");
+const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
@@ -31,6 +31,18 @@ async function run() {
 
     const toyCollection = client.db("actionZoneDB").collection("toys");
 
+    // count total product (email optional)
+    app.get("/total-products", async (req, res) => {
+      const email = req.query.email;
+      let query = {};
+      if (email) {
+        query = { seller_email: email };
+      }
+      const result = await toyCollection.countDocuments(query);
+      res.send({ totalProducts: result });
+    });
+
+    //get all toys
     app.get("/toys", async (req, res) => {
       const page = parseInt(req.query.page) || 0;
       const limit = parseInt(req.query.limit) || 20;
@@ -50,7 +62,7 @@ async function run() {
       res.send(result);
     });
 
-    // Category
+    // get all toys by Category
     app.get("/toys/:category", async (req, res) => {
       const page = parseInt(req.query.page) || 0;
       const limit = parseInt(req.query.limit) || 8;
@@ -71,18 +83,15 @@ async function run() {
       res.send(result);
     });
 
-    //total product
-    app.get("/total-products", async (req, res) => {
-      const email = req.query.email;
-      let query = {};
-      if (email) {
-        query = { seller_email: email };
-      }
-      console.log(query);
-      const result = await toyCollection.countDocuments(query);
-      console.log(result);
-      res.send({ totalProducts: result });
+    //get a single toy
+    app.get("/toy/:id", async (req, res) => {
+      const id = req.params.id;
+      console.log(id);
+      const query = { _id: new ObjectId(id) };
+      const result = await toyCollection.findOne(query);
+      res.send(result);
     });
+
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log(
