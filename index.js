@@ -46,6 +46,7 @@ async function run() {
     app.get("/toys", async (req, res) => {
       const page = parseInt(req.query.page) || 0;
       const limit = parseInt(req.query.limit) || 20;
+      const sortOrder = req.query.sort;
       const skip = page * limit;
       let email = req.query.email;
 
@@ -53,10 +54,21 @@ async function run() {
       if (email) {
         query = { seller_email: email };
       }
+      let sort = {};
+      if (sortOrder) {
+        if (sortOrder === "asc") {
+          sort = { price: 1 };
+        } else if (sortOrder === "desc") {
+          sort = { price: -1 };
+        } else {
+          sort = {};
+        }
+      }
       const result = await toyCollection
         .find(query)
         .skip(skip)
         .limit(limit)
+        .sort(sort)
         .toArray();
 
       res.send(result);
@@ -98,21 +110,33 @@ async function run() {
       res.send(result);
     });
 
-    // Update Operations
+    // Update a toy
     app.patch("/toy/:id", async (req, res) => {
       const id = req.params.id;
-      console.log(id);
       const updatedToy = req.body;
-      console.log(updatedToy);
       const query = { _id: new ObjectId(id) };
-      // const updatedDocs = {
-      //   $set: {
-      //     status: updatedToy.status,
-      //   },
-      // };
       const result = await toyCollection.replaceOne(query, updatedToy);
       res.send(result);
     });
+
+    //Delete a toy
+    app.delete("/toy/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) };
+      const result = await toyCollection.deleteOne(query);
+      res.send(result);
+    });
+
+    //search by name
+    app.get("/toySearchByName/:text", async (req, res) => {
+      const searchText = req.params.text;
+      const query = {
+        name: { $regex: searchText, $options: "i" },
+      };
+      const result = await toyCollection.find(query).toArray();
+      res.send(result);
+    });
+
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log(
