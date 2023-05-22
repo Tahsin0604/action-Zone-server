@@ -1,5 +1,5 @@
 //import
-const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
+
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
@@ -12,9 +12,9 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 app.use(cors());
 
+const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 //MongoDb server
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.hrqu461.mongodb.net/?retryWrites=true&w=majority`;
-
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
   serverApi: {
@@ -28,9 +28,10 @@ async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
-
-    const toyCollection = client.db("actionZoneDB").collection("toys");
-    const categoryCollection = client.db("actionZoneDB").collection("category");
+    const toyCollection = await client.db("actionZoneDB").collection("toys");
+    const categoryCollection = await client
+      .db("actionZoneDB")
+      .collection("category");
 
     //find sub-category
     app.get("/category/:category", async (req, res) => {
@@ -42,9 +43,7 @@ async function run() {
 
     // count total product
     app.get("/total-products", async (req, res) => {
-      console.log("hello");
       const result = await toyCollection.countDocuments();
-      console.log(result);
       res.send({ totalProducts: result });
     });
 
@@ -101,7 +100,6 @@ async function run() {
       if (subCategory !== "all") {
         query = { category: category, sub_category: subCategory };
       }
-      console.log(query);
 
       const result = await toyCollection
         .find(query)
@@ -159,6 +157,8 @@ async function run() {
     console.log(
       "Pinged your deployment. You successfully connected to MongoDB!"
     );
+  } catch (error) {
+    console.error("Failed to connect to MongoDB Atlas:", error);
   } finally {
     // Ensures that the client will close when you finish/error
     // await client.close();
@@ -169,6 +169,7 @@ run().catch(console.dir);
 app.get("/", (req, res) => {
   res.send("Toy store server is running");
 });
+
 app.listen(port, () => {
   console.log("Port: ", port);
 });
