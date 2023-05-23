@@ -97,7 +97,7 @@ async function run() {
       const category = req.params.category;
 
       let query = { category: category };
-      if (subCategory !== "all") {
+      if (subCategory !== "All") {
         query = { category: category, sub_category: subCategory };
       }
 
